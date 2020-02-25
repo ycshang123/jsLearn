@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--应用外部的js文件
+     <script src="demo.js">
+     
+    </script> -->
+    <p id="content"></p>
+    <script>
+      document.write("<h3>第一章内容练习：</h3>");
+      //JavaScript的四种输出方式
+      document.getElementById("content").innerHTML = "欢迎来到我的主页";
+      document.write("Hello JavaScript!");
+      console.log("hello");
+      //格式化文本
+      document.write("<h1>Hello JavaScript!</h1>");
+      document.write("<h3>第二章内容练习：</h3>");
+      //使用变量输出
+      var x = "你好 JavaScript";
+      console.log(x);
+      document.write(x);
+      var y = 100;
+      document.write(typeof Y);
+      //JavaScript数据类型
+      var hello = "hello world";
+      var age = 21;
+      var live = true;
+      var girlfriend = null;
+      var favsong = undefined;
+      var Car = {
+        name: "奔驰",
+        status: "漏油"
+      };
+      //数字的规范
+      var x1 = 34.0;
+      console.log("x1的值是：" + x1);
+      var x2 = 34;
+      console.log("x2的值是：" + x2);
+      var x3 = 123e5;
+      console.log("x3的值是：" + x3);
+      var x4 = 123e-5;
+      console.log("x4的值是：" + x4);
+      //字符串
+      var carname = "Volvo xc60";
+      var Carname = "Volvo xc60";
+      var X = carname == Carname;
+      console.log("X的值为" + X);
+      var answer = "It's alright";
+      console.log("answer的值为：" + answer);
+      var answer1 = "He is called 'Loen'";
+      console.log("answer1的值为：" + answer1);
+      var answer2 = 'He is called "Loen" ';
+      console.log("answer2的值为：" + answer2);
+      var sayHello = "Hello! '我是一名JavaScript程序员'";
+      console.log("sayHello的值为：" + sayHello);
+      //undefined和null
+      var a1;
+      console.log(typeof a1);
+      var b1 = 42;
+      console.log(typeof b1);
+      b1 = a1;
+      console.log(b1);
+      console.log(typeof null === "object");
+      //typeof运算符
+      console.log(typeof undefined === "undefined");
+      console.log(typeof true === "boolean");
+      console.log(typeof 42 === "number");
+      console.log(typeof "42" === "string");
+      console.log(typeof { lift: 42 } === "object");
+      console.log(typeof Symbol() === "symbol");
+      console.log(typeof null === "object");
+      //比较运算符
+      var num =10;
+      console.log(num ==8);
+      //三元运算符
+      var age =16;
+      var variable = (age<18)?"未成年人":"成年人";
+      console.log(variable);
+      //JavaScript运算符
+      var a = 12 + 3;
+      console.log("a的运算结果是" + a);
+      document.write("a的运算结果是" + a);
+      var b = 10;
+      var c = b + 7 + 20 + 45 + 6548;
+      console.log("c的运算结果是" + c);
+      document.write("c的运算结果是" + c);
+      var e = 10 * 9;
+      document.write("e的运算结果是" + e);
+      var f = 100 / 5;
+      document.write("f的运算结果是" + f);
+      //赋值运算符
+      var a2 =5;
+      var b2 =6;
+      console.log(a2 += b2);
+      var c1 = 'hello';
+      var d1 = 'Nier';
+      console.log(c1 += d1);
+      //基本字符串
+      var coursename = "JavaScript 微课";
+      var coursename1 ='JavaScript 微课';
+      console.log("coursename的值为"+coursename);
+      console.log("coursename1的值为"+coursename1);
+      var character = coursename[5];
+      console.log("character的值为："+character);
+      //特殊字符
+      var intro ='I\'m Loen';
+      console.log("intro的值为"+intro);
+      var answer =" He is called \"Lusi\"";
+      console.log("answer的值为："+answer);
+      //字符串的长度
+      var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var len = txt.length;
+      console.log("txt的长度为"+len);
+      //字符串运算符
+      var myString1 ="我在学习";
+      var myString2 ="JavaScript编程语言";
+      console.log(myString1+myString2);
+      //在字符串中插入变量
+      var myName = "Loen";
+      var myStr ="My name is "+myName+"and I am well";
+      console.log("mystr的值为："+myStr);
+      //字符串的不可变性
+      var mystr = "Bob";
+      mystr[0] = "J";
+      console.log("mystr的值为"+mystr);
+    </script>
+  </body>
+</html>
