@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //if-else语句
+      var num = 10;
+      if (num < 20) {
+        console.log("在线学习JavaScript很简单");
+      } else {
+        console.log("内容加载失败");
+      }
+      //if-else嵌套
+      var course = 2;
+      if (course == 1) {
+        console.log("HTML 教程");
+      } else if (course == 2) {
+        console.log("CSS 教程");
+      } else {
+        console.log("JavaScript 教程");
+      }
+      //switch语句
+      function myFunction() {
+        var x;
+        var d = new Date().getDay();
+        switch (d) {
+          case 0:
+            x = "今天是星期日";
+            break;
+          case 1:
+            x = "今天是星期一";
+            break;
+          case 2:
+            x = "今天是星期二";
+            break;
+          case 3:
+            x = "今天是星期三";
+            break;
+          case 4:
+            x = "今天是星期四";
+            break;
+          case 5:
+            x = "今天是星期五";
+            break;
+          case 6:
+            x = "今天是星期六";
+            break;
+        }
+        return x;
+      }
+      console.log(myFunction());
+      //for循环
+      var cars = ["本田", "奔驰", "本田", "丰田", "路虎", "福特"];
+      for (var i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+      }
+      var i = 0;
+      for (; i < 5; ) {
+        console.log(i);
+        i++;
+      }
+      var myArray = [];
+      for (var i = 1; i < 10; i += 2) {
+        myArray.push(i);
+      }
+      console.log("myArray的值有" + myArray);
+      //dowhile循环
+      var x1 = "",
+        i1 = 0;
+      do {
+        x1 = x1 + "The number is" + i1;
+        i1++;
+      } while (i1 < 5);
+      console.log(x1);
+      //break语句
+      var x2 = "";
+      for (i = 0; i < 10; i++) {
+        if (i == 3) {
+          break;
+        }
+        x2 = x2 + "The number is" + i;
+      }
+      console.log(x2);
+      //continue语句
+      var x3 = "";
+      for (i = 0; i <= 10; i++) {
+        if (i == 3) {
+          continue;
+        }
+        x3 = "数值是" + i;
+        console.log(x3);
+      }
+      //函数声明
+      function myFunction(a, b) {
+        return a * b;
+      }
+      var res = myFunction(2, 3);
+      console.log("res的值为" + res);
+      //函数调用
+      function myFunction1() {
+        console.log("调用一个函数");
+      }
+      myFunction1();
+      //多个参数
+      function sayHello(name, age) {
+        console.log(name + "年龄是：" + age + "岁");
+      }
+      sayHello("John", 20);
+      sayHello(20, "john");
+      sayHello("John");
+      //局部变量
+      function myFunction2() {
+        var carName = "大众";
+      }
+      //全局变量
+      var carName = "大众";
+      function myFunction3() {
+        carName = "本田 ";
+      }
+      console.log("carName的值为" + carName);
+      //return语句
+      function sum(a, b) {
+        c = a + b;
+        return c;
+      }
+      //alert警告框
+      alert("你好，这是一个警告框");
+      //prompt提示框
+      var user = prompt("请输入你的名字");
+      alert(user);
+      //comfirm确认框
+      var result = confirm("你确定要离开这个界面？");
+      if (result == true) {
+        alert("感谢你的光临");
+      } else {
+        alert("感谢你继续使用我们的服务！");
+      }
+      //JavaScript创建对象并访问对象的属性
+      var person = {
+        name: "John",
+        age: 31,
+        favColor: "green",
+        height: 183
+      };
+      var x4 = person.age;
+      var x5 = person["age"];
+      console.log("person的年龄为：" + x4);
+      console.log("person的年龄为：" + x5);
+      var course = { name: "JS", lessons: 54 };
+      console.log(course.name.length);
+      //更新对象的属性
+      var ourDog = {
+        name: "Camper",
+        legs: 4,
+        tails: 1,
+        friends: ["everthind!"]
+      };
+      ourDog.name = "Happy Camper";
+      console.log(ourDog.name);
+      ourDog["name"] = "Happy Camper";
+      console.log(ourDog.name);
+      //添加对象的属性
+      ourDog.bark = "bow-wow";
+      console.log(ourDog.bark);
+      ourDog["bark"] = "bow-wow";
+      console.log(ourDog.bark);
+      //删除对象的属性
+      var c1 = ourDog["tails"];
+      delete ourDog["tails"];
+      var c2 = ourDog["tails"];
+      console.log(ourDog);
+      //对象属性
+      var message = "Hello world";
+      var x6 = message.toUpperCase();
+      console.log(x6);
+      //使用[]读取对象属性
+      var a = "age";
+      var myObj = {
+        name: "Loen",
+        age: "28",
+        eat: function() {
+          return "I'm eating";
+        }
+      };
+      console.log(myObj["name"]);
+      console.log(myObj[a]);
+      console.log(myObj["eat"]());
+      //对象构造器
+      function person1(firstname, lastname, age, eyecolor) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.eyecolor = eyecolor;
+      }
+      var myFather = new person1("Jhon", "Doe", 50, "blue");
+      console.log(myFather.age);
+      var myMother = new person1("Sally", "Rally", 48, "green");
+      console.log(myMother);
+      //对象初始化
+      var John = { name: "John", age: 25 };
+      console.log(John);
+      var Loen = { name: "Loen", age: 28 };
+      console.log(Loen);
+      //添加方法
+      function person2(name, age) {
+        this.name = name;
+        this.age = age;
+        this.changeName = function(name) {
+          this.name = name;
+        };
+      }
+      var p = new person2("Loen", 28);
+      console.log(p);
+      p.changeName("John");
+      console.log(p);
+    </script>
+  </body>
+</html>
