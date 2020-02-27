@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      //创建数组
+      var myCars = new Array("Saab", "Volvo", "BMW");
+      console.log(myCars);
+      var myCars1 = new Array();
+      myCars1[0] = "Saab";
+      myCars1[1] = "Volvo";
+      myCars1[2] = "BMW";
+      myCars1[3] = "Lincoln";
+      console.log(myCars1);
+      console.log(myCars1[4]);
+      //向数组添加元素
+      var a = [];
+      a[0] = "zero";
+      a[1] = "one";
+      a.push("小点点", "小漂亮");
+      a.push("苔");
+      console.log(a);
+      //unshift()在数组头部添加元素
+      a.unshift("first");
+      console.log(a);
+      //从数组中删除元素
+      //pop（）方法是删除掉数组最末尾的元素
+      a.pop();
+      console.log(a);
+      //shift()方法删除掉第一个元素
+      a.shift();
+      console.log(a);
+      //concat()方法连接两个数组
+      var c1 = ["HTML", "CSS"];
+      var c2 = ["JS", "Python"];
+      var courses = c1.concat(c2);
+      console.log(courses);
+      //forEach方法
+      //效果界面展示
+      var numbers = [64, 45, 72, 11, 49];
+      function myFunction(item, index) {
+        var demo = document.getElementById("demo");
+        demo.innerHTML =
+          demo.innerHTML + "index[" + index + "]" + item + "<br>";
+      }
+      numbers.forEach(myFunction);
+      //indexOf()方法
+      var fruits = ["香蕉", "橙子", "苹果", "甜瓜", "甘蔗"];
+      var a1 = fruits.indexOf("苹果");
+      var b1 = fruits.indexOf("哈密瓜");
+      console.log(a1);
+      console.log(b1);
+      //slice方法
+      var citrus = fruits.slice(1, 3);
+      console.log(citrus);
+      //关联数组
+      var person = [];
+      person["name"] = "Loen";
+      person["age"] = 28;
+      console.log(person["age"]);
+      //String对象定义
+      var txt = new String("string");
+      var txt1 = "string";
+      console.log(txt);
+      console.log(txt1);
+      //string中的一些方法
+      var str = "Hello,Nier";
+      //把字符串转为小写
+      var a2 = str.toLocaleLowerCase();
+      console.log(a2);
+      //把字符串转为大写
+      var b2 = str.toLocaleUpperCase();
+      console.log(b2);
+      var c3 = " Hello world".trim();
+      console.log(c3);
+      var str1 = "Hello world, welcome to the w3cschool";
+      var n = str1.indexOf("welcome");
+      console.log(n);
+      var c4 = str.indexOf("loen");
+      console.log(c4);
+      var str2 = "Mr Blue has a blue house and a blue car and a blue hat";
+      //替换字符串中首次出现的blue
+      var n1 = str2.replace("blue", "red");
+      console.log(n1);
+      //替换字符串中所有出现的blue
+      var c5 = str2.replace(/blue/g, "red");
+      console.log(c5);
+      var str3 = "Hello world";
+      document.write(str3.substring(3) + "<br>");
+      document.write(str3.substring(3, 7));
+      //window对象属性
+      //返回窗口的文档显示区的高度
+      var winInnerHeight = window.innerHeight;
+      console.log(winInnerHeight);
+      //返回窗口文档显示区的宽度
+      var winInnerWidth = window.innerWidth;
+      console.log(winInnerWidth);
+      //返回窗口的外部宽度，包含工具条与滚动条
+      var winOuterWidth = window.outerHeight;
+      console.log(winOuterWidth);
+      //返回窗口的外部高度，包含工具条与滚动条
+      var winOuterHeight = window.outerHeight;
+      console.log(winOuterHeight);
+      //赶回相对于屏幕窗口的x坐标
+      var winScreenLeft = window.screenLeft;
+      console.log(winScreenLeft);
+      //返回相对于屏幕窗口的y坐标
+      var winScreenTop = window.screenTop;
+      console.log(winScreenTop);
+      // window.open(URL, name, specs, replace);
+      function open_win() {
+        window.open("http://www.baidu.com");
+      }
+      function openWin() {
+        myWindow = window.open("", "", "width=200,height=100");
+        myWindow.document.write("<p>这是'我的窗口'</p>");
+        myWindow.focus();
+      }
+      //3秒钟打开一个窗口，然后关闭
+      // var myWindow = window.open("", "", "width=200,height=100");
+      // myWindow.document.write("<p>这是'我的窗口'</p>");
+      // setTimeout(function() {
+      //   myWindow.close();
+      // }, 3000);
+      //使用clearTimeout方法阻止窗口打开
+      var myVar;
+      function myFunction1() {
+        myVar = setTimeout(function() {
+          alert("Hello");
+        }, 3000);
+      }
+      function myStopFunction() {
+        clearTimeout(myVar);
+      }
+      //json实例和数组
+      {
+        "sites"[
+          ({ name: "baidu", url: "www.baidu.com" },
+          { name: "Google", url: "www.google.com" },
+          { name: "Taobao", url: "www.taobao.com" })
+        ];
+      }
+      var text =
+        '{"employees":[' +
+        '{ "name": "baidu", "site": "http://www.baidu.com" },' +
+        '{ "name": "Google","site": "http://www.google.com" },' +
+        '{ "name": "Taobao","site": "http://www.taobao.com" }]}';
+      obj = JSON.parse(text);
+      console.log(obj);
+      document.getElementById("demo").innerHTML =
+        obj.employees[1].name + " " + obj.employees[1].site;
+      JSON.parse('{"p":5,"s":1.5,"t":-3}', function(k, v) {
+        if (k === "") return v;
+        return v * 2;
+      });
+      JSON.parse('{"1":1,"2":2,"3":{"4":4,"5":{"6":6}}}', function(k, v) {
+        console.log(k); //输出当前的属性名，从而得知遍历顺序是从内向外的
+        //最后一个属性名会是个空字符串
+        //返回原始属性值相当于没有传递revier参数
+        return v;
+      });
+      //json的Stringfy方法
+      var str4 = { name: "baidu", site: "http://www.baidu,com" };
+      str_pretty1 = JSON.stringify(str4);
+      document.write("只有一个参数的情况下");
+      document.write("<br>");
+      document.write("<pre>" + str_pretty1 + "</pre>");
+      document.write("<br>");
+      //使用四个空格缩进
+      str_pretty2 = JSON.stringify(str, null, 4);
+      document.write("使用参数情况下");
+      document.write("<br>");
+      //pre用于格式化输出
+      document.write("<pre>" + str_pretty2 + "</pre>");
+      //Math方法
+      document.write(Math.PI);
+      //计算一个数字的平方根
+      var number1 = Math.sqrt(4);
+      document.write(number1);
+      var n2 = prompt("请输入一个数字", "");
+      var answer = Math.sqrt(n2);
+      alert("数字" + n2 + "的平方根是：" + answer);
+      //floor()方法
+      var t1 = Math.floor(45.95);
+      console.log(t1);
+      // var t2 = Math.floor(45.05);
+      // console.log(t2);
+      var t3 = Math.floor(4);
+      console.log(t3);
+      var t4 = Math.floor(-45.05);
+      console.log(t4);
+      var t5 = Math.floor(-45.95);
+      console.log(t5);
+      //math.round()方法
+      var q1 = Math.round(20.49);
+      console.log(q1);
+      var q2 = Math.round(20.5);
+      console.log(q2);
+      var q3 = Math.round(-20.5);
+      console.log(q3);
+      var q4 = Math.round(-20.51);
+      console.log(q4);
+      //random方法
+      var z1 = Math.floor(Math.random() * 10 + 1);
+      console.log(z1);
+      //date当前时间的使用
+      function printTime() {
+        var e = new Date();
+        console.log(e);
+        var hours = e.getHours();
+        console.log(hours);
+        var mins = e.getMinutes();
+        var secs = e.getSeconds();
+        document.body.innerHTML = hours + ":" + mins + ":" + secs;
+      }
+      setInterval(printTime, 1000);
+    </script>
+  </body>
+</html>
