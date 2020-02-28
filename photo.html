@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="prev()">上一张</button>
+      <img src="../img/favicon.png" id="slider" />
+      <button onclick="next()">下一张</button>
+    </div>
+    <script>
+      //添加幻灯片
+      var img = [
+        "../img/message.png",
+        "../img/photo.png",
+        "../img/RoundTable.png",
+        "../img/赞.png"
+      ];
+      var num = 0;
+      function next() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= img.length) {
+          num = 0;
+        }
+        slider.src = img[num];
+      }
+      function prev() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0) {
+          num = img.length - 1;
+        }
+        slider.src = img[num];
+      }
+    </script>
+  </body>
+  <style>
+    #slider {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</html>

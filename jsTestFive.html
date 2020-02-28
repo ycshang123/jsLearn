@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JavaScript事件流 -->
+    <p id="tip">这边显示提示</p>
+    <h2 id="tip">这边显示提示</h2>
+    <hr />
+    <p onclick="myFunction()">点击我看看</p>
+    <br />
+    <input type="text" onfocus="focusfn()" onblur="onblur()" value="获得焦点" />
+    <br />
+    <div onmouseover="moverfn()" onmouseout="moutfn()">鼠标移动进来看看</div>
+    <button onclick="show()">点击我</button>
+    <!-- 监听事件 -->
+    <div id="demo">
+      <p id="date"></p>
+    </div>
+    <input type="text" id="name" onchange="change()" />
+   
+   
+  </body>
+  <script>
+    function show() {
+      alert("你好，我在这里！");
+    }
+    var x = document.getElementById("demo");
+    x.onclick = function() {
+      document.getElementById("date").innerHTML = new Date();
+    };
+    function change() {
+      var x = document.getElementById("name");
+      x.value = x.value.toUpperCase();
+    }
+    element.addEventListener("click", myFunction);
+    element.addEventListener("mouseover", myFunction);
+
+    function myFunction() {
+      alert("Hello JavaScript");
+    }
+    //添加事件监听
+    
+    
+  </script>
+  <style>
+    #demo {
+      width: 100%;
+      height: 60px;
+      background: #cc9ca9;
+    }
+   
+  </style>
+</html>

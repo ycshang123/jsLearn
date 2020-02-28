@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 创建一个盒子 -->
+    <div id="container">
+      <div id="box"></div>
+    </div>
+    <div id="demo"></div>
+    <p>hi</p>
+    <p>hello</p>
+    <p>hi</p>
+    <div class="test">
+      <span class="test">Hi I'm Loen!</span>
+    </div>
+    <p class="test">This is a paragraph</p>
+    <div id="a">
+      <p>一些文本</p>
+      <p>一些文本</p>
+    </div>
+    <img id="my-img" src="../img/RoundTable.png" />
+    <a href="http://www.baidui.com">百度</a>
+    <div id="demoI" style="width: 200px;">
+      一些文本
+    </div>
+    <div id="demoII">
+      <p>一些文本</p>
+      <p id="p1">这是一个段落</p>
+      <p id="p2">这是另一个段落</p>
+    </div>
+    <script>
+      //创建move方法，是里面的盒子移动
+      var pos = 0;
+      var box = document.getElementById("box");
+      function move() {
+        pos += 1;
+        box.style.left = pos + "px";
+      }
+      //   var t = setInterval(move, 10);
+      //创建move方法，到边停止
+      var pos1 = 0;
+      var box1 = document.getElementById("box");
+      function move1() {
+        if (pos1 >= 540) {
+          clearInterval(t1);
+        } else {
+          pos1 += 1;
+          box.style.left = pos1 + "px";
+        }
+      }
+      //   var t1 = setInterval(move1, 10);
+      //document使用
+      //   document.body.innerHTML = "Some text";
+      //getElementById()方法的使用
+      var elem = document.getElementById("demo");
+      elem.innerHTML = "Hello world";
+      //getElementsByTagNme()方法的使用
+      //   var arr = document.getElementsByTagName("p");
+      //   for (var x = 0; x < arr.length; x++) {
+      //     arr[x].innerHTML = "Hi there";
+      //   }
+      //getElementsByClassName()方法的使用
+      //   var arr1 = document.getElementsByClassName("test");
+      //   arr1[1].innerHTML = "Hi I am Peter";
+      //   var a1 = document.getElementById("a");
+      //   var arr2 = a1.childNodes;
+      //   for (var x = 0; x < arr2.length; x++) {
+      //     arr[x].innerHTML = "新的文本";
+      //   }
+      //改变属性
+      //图片
+      var b1 = document.getElementById("my-img");
+      b1.src = "../img/favicon.png";
+      //连接
+      var b2 = document.getElementsByTagName("a");
+      b2[0].href = "https://www.google.cn";
+      b2[0].innerHTML = "google";
+      //更改样式
+      var c1 = document.getElementById("demoI");
+      c1.style.color = "6600FF";
+      c1.style.width = "200px";
+      //添加文本
+      //创建一个段落
+      var d = document.createElement("p");
+      var node = document.createTextNode("添加一些新的文本");
+      //添加文本到段落
+      d.appendChild(node);
+      var div = document.getElementById("demoII");
+      //将段落添加到div中
+      div.appendChild(d);
+      //删除段落
+      var parent = document.getElementById("demoII");
+      var child = document.getElementById("p1");
+      parent.removeChild(child);
+      //更改文本
+      var d1 = document.createElement("p");
+      var node2 = document.createTextNode("这是第二个新文本");
+      d1.appendChild(node2);
+      var parent1 = document.getElementById("demoII");
+      var child1 = document.getElementById("p2");
+      parent1.replaceChild(d1, child1);
+    </script>
+  </body>
+  <style>
+    #container {
+      width: 600px;
+      height: 400px;
+      background: rgb(170, 199, 170);
+      position: relative;
+    }
+    #box {
+      width: 60px;
+      height: 60px;
+      background: rgb(211, 144, 144);
+      position: absolute;
+    }
+    #demo {
+      width: 100%;
+      height: 40px;
+      background: #cc6633;
+    }
+    .test {
+      width: 100%;
+      height: 60px;
+      font: 500;
+      font-size: 16px;
+      background: #00c5fd;
+    }
+    #a {
+      background: burlywood;
+    }
+    #demoI {
+      background: #009688;
+      height: 60px;
+    }
+    #demoII {
+      background: #89d185;
+      height: 200px;
+    }
+  </style>
+</html>
